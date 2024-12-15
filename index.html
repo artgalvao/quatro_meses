@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Meses de Nós</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>4 Meses de Nós</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <p>Arthur e Bia, juntos há 4 meses de amor e aventuras! ❤️</p>
+            </section>
+            <section class="gallery">
+                <h2>Nossos Momentos</h2>
+                <div class="images">
+                    <img class="gallery-image" src="image1.jpg" alt="Foto especial 1">
+                    <img class="gallery-image" src="image2.jpg" alt="Foto especial 2">
+                    <img class="gallery-image" src="image3.jpg" alt="Foto especial 3">
+                </div>
+            </section>
+            <section class="message">
+                <h2>Para Você</h2>
+                <p>Amor, cada momento ao seu lado é um capítulo inesquecível da nossa história. Que venham muitos mais meses ao seu lado. Te amo! ❤️</p>
+                <button id="surpriseBtn">Clique para uma surpresa!</button>
+            </section>
+        </main>
+        <footer>
+            <p>Com amor, seu namorado lindo, gostoso e maravilho.</p>
+            <p>Obs.: Fiz tudo pelo ChatGPT, daqui um tempo, vou tentar fazer um eu mesmo e mais completo.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            const surpriseMessage = document.createElement('div');
+            surpriseMessage.style.position = 'fixed';
+            surpriseMessage.style.top = '50%';
+            surpriseMessage.style.left = '50%';
+            surpriseMessage.style.transform = 'translate(-50%, -50%)';
+            surpriseMessage.style.background = '#fff';
+            surpriseMessage.style.padding = '20px';
+            surpriseMessage.style.borderRadius = '10px';
+            surpriseMessage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            surpriseMessage.innerHTML = `
+                <h2>Surpresa! 🎉</h2>
+                <p>Amor, você é a razão do meu sorriso todos os dias. Amo você! 💕</p>
+                <button id="closeBtn">Fechar</button>
+            `;
+
+            document.body.appendChild(surpriseMessage);
+
+            document.getElementById('closeBtn').addEventListener('click', function() {
+                document.body.removeChild(surpriseMessage);
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            margin: 20px 0;
+        }
+
+        .gallery h2 {
+            margin-bottom: 10px;
+        }
+
+        .images {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            margin: 30px 0;
+        }
+
+        .message p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #ff4a3d;
+        }
+
+        footer p {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</body>
+</html>
